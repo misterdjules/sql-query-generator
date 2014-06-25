@@ -1,4 +1,4 @@
-include ../../mktools/show_make_rules.mk
+include deps/mktools/show_make_rules.mk
 
 lib_sqlite_helper_dyn_shared := libsqlitehelper.so
 lib_sqlite_helper_static 	 := libsqlitehelper.a
@@ -6,11 +6,11 @@ lib_sqlite_helper_static 	 := libsqlitehelper.a
 sources := sqlite_helper.c
 objects := $(subst .c,.o,$(sources))
 
-lib_debug_dir 		:= ../debug
+lib_debug_dir 		:= deps/debug
 libdebug_static_lib := $(lib_debug_dir)/libdebug.a
 libdebug_objects    := $(wildcard $(lib_debug_dir)/*.o)
 
-lib_jstring_dir 		:= ../jstring
+lib_jstring_dir 		:= deps/jstring
 libjstring_static_lib 	:= $(lib_jstring_dir)/libjstring.a
 libjstring_objects 		:= $(wildcard $(lib_jstring_dir)/*.o)
 
